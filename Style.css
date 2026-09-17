@@ -635,3 +635,31 @@
     transform: translateY(-3px);
     box-shadow: 0 4px 18px rgba(255, 45, 85, 0.45);
   }
+
+  /* Projects Section: 4 cards in a single row */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 1.25rem;
+}
+
+/* Tablet screens (2 cards per row) */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile screens (1 card per row) */
+@media (max-width: 650px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.project-card {
+  padding: 1.4rem;
+}
+
+.project-card h3 {
+  font-size: 1.15rem;
+}
